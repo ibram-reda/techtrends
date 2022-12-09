@@ -1,11 +1,31 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends -f DockerFile .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run --name techtrends -d -p 7111:3111  techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker exec techtrends /bin/sh -c "cat /app/app.log"
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:20] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:app:2022-12-09 17:29:26.786388, Article '2020 CNCF Annual Report' retrieved!
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:26] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:26] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2022-12-09 17:29:30.520092, Article 'Kubernetes v1.20 Release Notes' retrieved!
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:30] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2022-12-09 17:29:35.904480, about page has been reached
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:35] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:39] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:29:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2022-12-09 17:30:20.142835, Artical 'good day in the docker way' Created
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:30:20] "[32mPOST /create HTTP/1.1[0m" 302 -
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:30:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [09/Dec/2022 17:30:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -

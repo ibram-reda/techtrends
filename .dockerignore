@@ -1,0 +1,3 @@
+techtrends/*.db
+techtrends/*.log
+*/__pycache__/*
