@@ -1,3 +1,8 @@
 techtrends/*.db
 techtrends/*.log
 */__pycache__/*
+.vagrant/*
+argocd/*
+helm/*
+kubernetes/*
+screenshots/*
