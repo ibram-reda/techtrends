@@ -9,7 +9,7 @@ service:
 
 image:
   repository: ibramreda/techtrends 
-  tag: latestlatest
+  tag: latest
   pullPolicy: IfNotPresent
 
 replicaCount: 3
