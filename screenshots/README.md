@@ -22,3 +22,12 @@ Place any project screenshots in this directory.
 
 #### kubernetes-declarative-manifests
 ![application deployed to claster](./kubernetes-declarative-manifests.PNG)
+
+<h2 align="center">step 6 Screenshots</h2>
+
+#### argocd-ui
+![install argocd](./argocd-ui.PNG)
+#### argocd-techtrends-staging
+![staging](./argocd-techtrends-staging.PNG)
+#### argocd-techtrends-prod
+![staging](./argocd-techtrends-prod.PNG)
