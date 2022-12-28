@@ -49,16 +49,16 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-      app.logger.info(f"{datetime.now()}, Article with id = {post_id} Not Found!")
+      app.logger.info(f"Article with id = {post_id} Not Found!")
       return render_template('404.html'), 404
     else:
-      app.logger.info(f"{datetime.now()}, Article '{post['title']}' retrieved!")
+      app.logger.info(f"Article '{post['title']}' retrieved!")
       return render_template('post.html', post=post)
 
 # Define the About Us page
 @app.route('/about')
 def about():
-    app.logger.info(f"{datetime.now()}, about page has been reached")
+    app.logger.info(f"about page has been reached")
     return render_template('about.html')
 
 # Define the post creation functionality 
@@ -76,7 +76,7 @@ def create():
                          (title, content))
             connection.commit()
             connection.close()
-            app.logger.info(f"{datetime.now()}, Artical '{title}' Created")
+            app.logger.info(f"Artical '{title}' Created")
 
             return redirect(url_for('index'))
 
@@ -103,11 +103,16 @@ def metrics():
 
 # start the application on port 3111
 if __name__ == "__main__":
+   import sys
+   stdout_handler = logging.StreamHandler(sys.stdout)
+   stderr_handler = logging.StreamHandler(sys.stderr)
+   file_handler = logging.FileHandler("app.log")
+   allHandlers = [stderr_handler, stdout_handler, file_handler]
+   log_format = '%(levelname)s: %(name)-2s - [%(asctime)s] - %(message)s'
+
    logging.basicConfig(
         level=logging.DEBUG,
-        format="%(asctime)s [%(levelname)s] %(message)s",
-        handlers=[
-        logging.FileHandler("app.log"),
-        logging.StreamHandler()
-    ])
+        format=log_format,
+        handlers=allHandlers
+        )
    app.run(host='0.0.0.0', port='3111')
