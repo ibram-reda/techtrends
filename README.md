@@ -1,5 +1,5 @@
 # techtrends
-this project is part of my nano degree on udacity "Cloud Native Application Architecture"
+this project is part of my nano degree on udacity "[Cloud Native Application Architecture][1]"
 
 ## Background
 TechTrends is an online website used as a news sharing platform, that enables consumers to access the latest news within the cloud-native ecosystem. In addition to accessing the available articles, readers are able to create new media articles and share them.
@@ -16,3 +16,7 @@ The web application is written using the Python Flask framework. It uses SQLite,
 4. Construct the **Kubernetes declarative manifests** to deploy TechTrends to a sandbox namespace within a Kubernetes cluster. The cluster should be provisioned using k3s in a vagrant box.
 5. Template the Kubernetes manifests using a **Helm chart** and provide the input configuration files for staging and production environments.
 6. Implement the Continuous Delivery practices, by deploying the TechTrends application to staging and production environments using **ArgoCD** and the Helm chart.
+
+
+
+[1]: https://www.udacity.com/course/cloud-native-application-architecture-nanodegree--nd064
